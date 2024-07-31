@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 003</title>
+
+    <!-- 폰트어썸 연결 -->
+    <script src="https://kit.fontawesome.com/0b53e6bf8f.js" crossorigin="anonymous"></script>
+
+    <!-- 외부스타일시트 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script src="js.js"></script>
+
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="intro">
+        <div class="pic">
+            <div class="pic_left">
+                <ul>
+                    <li><img src="img/intro1.jfif" alt=""></li>
+                    <li><img src="img/intro2.jfif" alt=""></li>
+                    <li><img src="img/intro3.jpg" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="img/intro1.jfif" alt=""></li>
+                    <li><img src="img/intro2.jfif" alt=""></li>
+                    <li><img src="img/intro3.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="pic_center">
+                    <ul>
+                        <li><img src="img/intro4.png" alt=""></li>
+                        <li><img src="img/intro5.jfif" alt=""></li>
+                        <li><img src="img/intro6.jpg" alt=""></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/intro4.png" alt=""></li>
+                        <li><img src="img/intro5.jfif" alt=""></li>
+                        <li><img src="img/intro6.jpg" alt=""></li>
+                    </ul>
+            </div>
+            <div class="pic_right">
+                <ul>
+                    <li><img src="img/intro7.png" alt=""></li>
+                    <li><img src="img/intro8.jpg" alt=""></li>
+                    <li><img src="img/intro9.jpg" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="img/intro7.png" alt=""></li>
+                    <li><img src="img/intro8.jpg" alt=""></li>
+                    <li><img src="img/intro9.jpg" alt=""></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="phone">
+            <div class="phone_img">
+                <h1><span class="hr">00</span>:<span class="min">00</span></h1>
+                <img src="img/sing1.png" alt="">
+                <div class="txt">
+                    <ul>
+                        <li>[COVER] - HAPPY <span>(원곡:DAY 6)</span></li>
+                        <li><span>도겸</span></li>
+                    </ul>
+                    <ul class="play">
+                        <li><i class="fa-solid fa-backward"></i></li>
+                        <li><i class="fa-solid fa-play"></i></li>
+                        <li><i class="fa-solid fa-forward"></i></li>
+                    </ul>
+                    <p id="asyncExec"></p>
+
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    <header>
+        <h1><img src="img/logo.png"></h1>
+        <nav>
+            <ul>
+                <li><img src="img/MAIN_01.png" alt=""><img src="img/MAIN_02.png" alt="" class="nav2 main"></li>
+                <li><img src="img/PROFILE_01.png" alt=""><img src="img/PROFILE_02.png" alt="" class="nav2"></li>
+                <li><img src="img/PICTURE_01.png" alt=""><img src="img/PICTURE_02.png" alt="" class="nav2"></li>
+                <li><img src="img/SING_01.png" alt=""><img src="img/SING_02.png" alt="" class="nav2"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article class="on">
+            <div class="home">
+                <div class="img">
+                    <img src="img/home_img.png" alt="">
+                </div>
+                <div class="txt">
+                    <div class="home_txt1">
+                        <img src="img/DOKYEOM_1.png" alt="">
+                    </div>
+                    <div class="home_txt2">
+                        <img src="img/DOKYEOM_2.png" alt="">
+                    </div>
+                </div>
+                <div class="bg"></div>
+            </div>
+        </article>
+        <article class="profile">
+            <div class="txt">
+                <div class="left">
+                    <ul class="txt1">
+                        <li><span>도겸</span> (본명 : 이석민)</li>
+                        <li>1997.2.18.(물병자리, 소띠)</li>
+                    </ul>
+                    <ul class="txt2">
+                        <li><span>MBTI</span> : INFP</li>
+                        <li><span>소속사</span> : 플레디스 엔터테인먼트</li>
+                    </ul>
+                    <ul class="txt3">
+                        <li><span>신체</span> : 178.4cm / 68kg / O형(Rh-)</li>
+                        <li><span>가족</span> : 아버지, 어머니, 누나, 반려견 우주, 반려돌 도돌</li>
+                    </ul>
+                    <ul class="txt4">
+                        <li><span>보컬</span> : 감성적인 보컬로 많은 하이라이트를 담당</li>
+                        <li><span>다재다능함</span> : 다양한 예능과 뮤지컬에서의 활약</li>
+                        <li><span>퍼포먼스</span> : 뛰어난 춤 실력과 에너지 넘치는 무대 </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="txt_box">
+                        <ul class="txt1">
+                            <li><span>소속 그룹 :</span> 세븐틴 · 세븐틴 보컬팀 · 부석순</li>
+                        </ul>
+                        <ul class="txt2">
+                            <li><span>활동 : </span>2015년 5월 26일 세븐틴</li>
+                            <li>복면가왕 70회 달의 몰락 (금 나와라 뚝딱 아기도깨비)</li>
+                            <li>복면가왕 70회 인연 (금 나와라 뚝딱 아기도깨비)</li>
+                            <li>한편의 너</li>
+                            <li>위대한 유혹자 OST Part.3 내가먼저</li>
+                            <li>슬기로운 의사생활 시즌2 OST Part.8<br>
+                            여전히 아름다운지</li>
+                            <li>스물다섯 스물하나 OST Part.5 Go!</li>
+                            <li>웰컴투 삼달리 OST Part1 단발머리</li>
+                            
+                        </ul>
+                        <ul class="txt3">
+                            <li><span>뮤지컬 : </span>2019년 엑스칼리버 아더역 첫 주연극</li>
+                            <li>2021년 엑스칼리버 아더역 재연</li>
+                        </ul>
+                        <ul class="txt4">
+                            <li><span>광고 : </span>2022년 씨제이올리브영 브링그린 광고</li>
+                        </ul>
+                        <ul class="txt5">
+                            <li><span>홍보대사 : </span>2022년 브링그린 브랜드모델</li>
+                            <li>2023년 ~ S2ND 뮤즈</li>
+                            <li>2023년 ~ BALLY 글로벌 엠버서더</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="img">
+                <img src="img/profile_img1.png" alt="">
+            </div>
+        </article>
+        <article class="picture">
+            <div class="left">
+                <img src="img/Camera.png" alt="" class="camera">
+                <ul>
+                    <li><img src="img/img_Group1.png" alt=""></li>
+                    <li><img src="img/img_Group2.png" alt=""></li>
+                    <li><img src="img/img_Group3.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="center1"></div>
+            <div class="center2">
+                <ul>
+                    <li><img src="img/img_Group4.png" alt=""></li>
+                    <li><img src="img/img_Group5.png" alt=""></li>
+                    <li><img src="img/img_Group6.png" alt=""></li>
+                    <li><img src="img/img_Group7.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><img src="img/img_Group8.png" alt=""></li>
+                    <li><img src="img/img_Group9.png" alt=""></li>
+                    <li><img src="img/img_Group10.png" alt=""></li>
+                    <li><img src="img/img_Group11.png" alt=""></li>
+                </ul>
+            </div>
+        </article>
+        <article class="sing">
+            <div class="dvd">
+                <ul>
+                    <li><img src="img/sing1.png" alt=""></li>
+                    <li><img src="img/sing2.png" alt=""></li>
+                    <li><img src="img/sing3.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="El">
+                <ul>
+                    <li><img src="img/El_1.jpg" alt=""></li>
+                    <li><img src="img/El_2.jpg" alt=""></li>
+                    <li><img src="img/El_3.jpg" alt=""></li>
+                    <li><img src="img/El_4.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="bar">
+                <ul>
+                    <li><img src="img/Back.png" alt=""></li>
+                    <li><img src="img/start.png" alt=""></li>
+                    <li><img src="img/next.png" alt=""></li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+</body>
+
+</html>

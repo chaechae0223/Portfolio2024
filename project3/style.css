@@ -1,0 +1,823 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+body {}
+
+/* 상세설정 */
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: #304A6F;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+header h1 {
+    width: 15%;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+header nav {
+    width: 90%;
+}
+
+header nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li {
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+header nav li .nav2 {
+    position: absolute;
+    top: 23px;
+    left: 20.1px;
+    display: none;
+}
+
+header nav li:hover .nav2 {
+    display: block;
+}
+
+section {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: #ccc;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+section article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: all 1s;
+}
+
+section article:nth-child(1) {
+    background-color: #304A6F;
+}
+section article:nth-child(2) {
+    background-color: lightpink;
+}
+section article:nth-child(3) {
+    background-color: lightsalmon;
+}
+section article:nth-child(4) {
+    background-color: lightblue;
+}
+
+section article.on {
+    opacity: 1;
+    z-index: 999;
+}
+
+/* intro 설정 */
+.intro {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #BABABA;
+    display: flex;
+    z-index: 1000;
+    transition: all 0.9s;
+}
+
+.intro.hide {
+    display: none;
+}
+
+
+
+.intro .pic {
+    width: 50%;
+    height: 100%;
+    background-color: #2F2F2F;
+    display: flex;
+}
+
+.intro .pic ul li img {
+    filter: grayscale(90%);
+    transition: all 0.9s;
+}
+
+.intro .pic ul li:hover img {
+    filter: grayscale(0);
+}
+.intro .pic .pic_left {
+    width: 33.3333%;
+    position: relative;
+}
+
+.intro .pic .pic_left ul:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    animation: ani1 60s infinite linear;
+} 
+.intro .pic .pic_left ul:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    animation: ani2 60s infinite linear;
+
+} 
+
+@keyframes ani1 {
+    0% {top:0%}
+    50% {top:1519px}
+    50.0001% {top:-1519px}
+    100% {top:0%}
+}
+
+@keyframes ani2 {
+    0% {top:-1519px}
+    50% {top:0}
+    100% {top:1519px}
+}
+
+.intro .pic .pic_left li {}
+
+.intro .pic .pic_left li img {
+    width: 320px;
+    height: auto;
+}
+
+
+.intro .pic .pic_center {
+    width: 33.3333%;
+    position: relative;
+} 
+
+.intro .pic .pic_center ul:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    animation: ani3 60s infinite linear;
+}
+
+.intro .pic .pic_center ul:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    animation: ani4 60s infinite linear;
+} 
+
+@keyframes ani3 {
+    0% {bottom:0%}
+    50% {bottom:1515px}
+    50.0001% {bottom:-1515px}
+    100% {bottom:0%}
+}
+
+@keyframes ani4 {
+    0% {bottom:-1515px}
+    50% {bottom:0}
+    100% {bottom:1515px}
+}
+
+.intro .pic .pic_center li {}
+
+.intro .pic .pic_center li img {
+    width: 320px;
+    height: auto;
+}
+
+.intro .pic .pic_right {
+    width: 33.3333%;
+    position: relative;
+} 
+
+.intro .pic .pic_right ul:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    animation: ani5 60s infinite linear;
+}
+
+.intro .pic .pic_right ul:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    animation: ani6 60s infinite linear;
+} 
+
+@keyframes ani5 {
+    0% {top:0%}
+    50% {top:1332px}
+    50.0001% {top:-1332px}
+    100% {top:0%}
+}
+
+@keyframes ani6 {
+    0% {top:-1332px}
+    50% {top:0}
+    100% {top:1332px}
+}
+
+.intro .pic .pic_right li {}
+
+.intro .pic .pic_right li img {
+    width: 320px;
+    height: auto;
+}
+
+.intro .phone {
+    width: 50%;
+    height: 100%;
+    background-image: url(img/intro_bg.png);
+    background-position: center center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.intro .phone .phone_img {
+    background-image: url(img/phone.png);
+    width: 800px;
+    height: 1000px;
+    background-size: 58%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: -20px;
+    margin-left: 40px;
+}
+
+.intro .phone .phone_img h1 {
+    color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -340px;
+    margin-left: 345px;
+    font-size: 66px;
+}
+
+.intro .phone .phone_img img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: 290px;
+    margin-top: -210px;
+    width: 300px;
+    height: auto;
+}
+
+.intro .phone .phone_img .txt {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: 290px;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(244, 244, 244, 0.7);
+    border-radius: 10px;
+}
+
+.intro .phone .phone_img .txt ul {}
+.intro .phone .phone_img .txt li {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.intro .phone .phone_img .txt li span {
+    font-size: 15px;
+}
+
+.intro .phone .phone_img .txt .play {
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: 80px;
+    margin-left: 320px;
+}
+
+.intro .play li {
+    margin-left: 40px;
+    cursor: pointer;
+}
+.intro .play li i {
+    font-size: 30px;
+}
+
+.intro .phone .txt p {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: 385px;
+    margin-top: 315px;
+}
+
+
+
+/* home 설정 */
+
+.home {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    width: 545px;
+    height: 685px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -350px;
+    margin-left: -600px;
+    z-index: 2;
+} 
+.img img {}
+
+.home .txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.home_txt1 {
+    width: 931px;
+    height: 124px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -400px;
+    margin-left: -350px;
+    z-index: 3;
+}
+.home_txt1 img {}
+
+.home_txt2 {
+    width: 931px;
+    height: 740px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -340px;
+    z-index: 1;
+}
+.home_txt2 img {}
+
+.home .bg {
+    background-color: #2F2F2F;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 83%;
+}
+
+
+/* Profile 설정 */
+.profile {
+    position: relative;
+    background-image: url(img/profile_bg.png);
+    background-position: center;
+    background-size: cover;
+}
+.profile .txt {
+    width: 1500px;
+    height: 680px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+}
+
+.profile .txt .left {
+    width: 50%;
+    height: 600px;
+    margin-left: 45px;
+    margin-top: 35px;
+    font-size: 16px;
+    position: absolute;
+}
+
+.profile .txt .left ul:nth-child(1) {
+    margin-top: 90px;
+}
+
+.profile .txt .left .txt1 {
+    background-color: #304A6F;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 180px;
+    box-shadow: 5px 5px 10px #2F2F2F;
+}
+
+.profile .txt .left .txt1 span {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #F7C9CB, #95A7D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile .txt .left .txt2 {
+    background-color: #304A6F;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 120px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px #2F2F2F;
+}
+
+.profile .txt .left .txt2 span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.profile .txt .left .txt3 {
+    background-color: #304A6F;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px #2F2F2F;
+}
+
+.profile .txt .left .txt3 span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.profile .txt .left .txt4 {
+    background-color: #304A6F;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px #2F2F2F;
+}
+
+.profile .txt .left .txt4 span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.profile .txt .left ul li {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+
+.profile .txt .right {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    width: 50%;
+    height: 600px;
+    margin-right: 25px;
+    margin-top: 35px;
+    font-size: 16px;
+    background-color: #304A6F;
+    box-shadow: 5px 5px 10px #2F2F2F;
+}
+
+.profile .txt .right .txt_box {
+    color: #fff;
+    position: absolute;
+    font-size: 16px;
+    left: 210px;
+    top: 20px;
+}
+
+.profile .txt .right .txt_box .txt1 {
+    margin-bottom: 20px;
+}
+
+.profile .txt .right .txt_box .txt1 span {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #F7C9CB, #95A7D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile .txt .right .txt_box .txt2 {
+    margin-bottom: 20px;
+}
+
+.profile .txt .right .txt_box .txt2 span {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #F7C9CB, #95A7D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile .txt .right .txt_box .txt2 li {
+    margin-left: 73px;
+    margin-bottom: 5px;
+}
+
+.profile .txt .right .txt_box .txt2 li:nth-child(1) {
+    margin-left: 0px;
+}
+
+.profile .txt .right .txt_box .txt3 {
+    margin-bottom: 20px;
+}
+
+.profile .txt .right .txt_box .txt3 span {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #F7C9CB, #95A7D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile .txt .right .txt_box .txt3 li {
+    margin-left: 100px;
+    margin-bottom: 5px;
+}
+
+.profile .txt .right .txt_box .txt3 li:nth-child(1) {
+    margin-left: 0px;
+}
+
+.profile .txt .right .txt_box .txt4 {
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+
+.profile .txt .right .txt_box .txt4 span {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #F7C9CB, #95A7D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile .txt .right .txt_box .txt4 li {
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+.profile .txt .right .txt_box .txt5 {
+    margin-bottom: 20px;
+    margin-left: 190px;
+}
+
+.profile .txt .right .txt_box .txt5 span {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to right, #F7C9CB, #95A7D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile .txt .right .txt_box .txt5 li {
+    margin-left: 90px;
+    margin-bottom: 5px;
+}
+
+.profile .txt .right .txt_box .txt5 li:nth-child(1) {
+    margin-left: 0px;
+}
+
+
+.profile .img {
+    width: 700px;
+    height: 766px;
+    position: absolute;
+    left: 50%;
+    margin-left: -310px;
+    filter: grayscale(80%);
+    cursor: pointer;
+    transition: all 0.9s;
+}
+
+.profile .img:hover {
+    filter: grayscale(0%);
+}
+
+
+/* picture 설정 */
+.picture {
+    display: flex;
+    background-image: url(img/picture_bg.png);
+    background-position: center bottom;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.picture .left {
+    width: 22%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.camera {
+    position: absolute;
+    right: -24px;
+}
+
+.picture .left ul {
+    margin-top: 190px;
+}
+.picture .left li {
+    transition: all 0.9s;
+    filter: grayscale(90%);
+    cursor: pointer;
+    height: 265px;
+}
+
+.picture .left li:hover{
+    filter: grayscale(0%);
+    box-shadow: 5px 5px 20px;
+}
+
+.picture .center1 {
+    width: 35%;
+    height: 100%;
+    background-image: url(img/picture_img.png);
+    background-position: center bottom;
+    background-size: cover;
+}
+.picture .center1 img {
+    width: 609px;
+    height: 743px;
+    position: fixed;
+    bottom: 0;
+}
+
+.picture .center2 {
+    width: 11%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture .center2 ul {
+    height: calc(285 * 4px);
+}
+.picture .center2 li {
+    height: 265px;
+    transition: all 0.9s;
+    filter: grayscale(90%);
+    cursor: pointer;
+}
+
+.picture .center2 li:hover{
+    filter: grayscale(0%);
+    box-shadow: 5px 5px 20px;
+}
+
+
+.picture .right {
+    width: 11%;
+    height: 100%;
+}
+
+.picture .right li {
+    transition: all 0.9s;
+    filter: grayscale(90%);
+    cursor: pointer;
+    height: 265px;
+}
+
+.picture .right li:hover{
+    filter: grayscale(0%);
+    box-shadow: 5px 5px 20px;
+}
+
+
+/* sing 설정 */
+
+.sing {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/sing_bg.png);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.sing .dvd {
+    width: 100%;
+    height: 40%;
+}
+.sing .dvd ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.sing .dvd li {
+    padding: 0 10px;
+}
+
+.sing .dvd li img {
+    transition: all 0.9s;
+    border-radius: 15px;
+    filter: grayscale(90%);
+}
+
+.sing .dvd li:hover img {
+    box-shadow: 5px 5px 10px #aaa;
+    filter: grayscale(0%);
+}
+
+.sing .El {
+    width: 100%;
+    height: 40%;
+}
+
+.sing .El ul {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.sing .El li {}
+
+.sing .El li img {
+    transition: all 0.9s;
+    border-radius: 15px;
+    width: 300px;
+    height: 300x;
+    filter: grayscale(90%);
+}
+
+.sing .El li:hover img {
+    box-shadow: 5px 5px 10px #888;
+    filter: grayscale(0%);
+}
+
+.sing .bar {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(44, 44, 44, 0.5);
+}
+
+.sing .bar ul {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.sing .bar li {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sing .bar li img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.sing .bar li:nth-child(2) img {
+    width: 50px;
+    height: 50px;
+} 
+
