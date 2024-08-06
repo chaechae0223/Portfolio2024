@@ -1,0 +1,586 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* 상세설정 */
+/* 헤더 설정 */
+
+header {
+    background-color: #FFF64F;
+    padding: 20px 0;
+    background-image: url(img/header_bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.header {}
+
+.header .logo {
+    text-align: center;
+}
+
+.header .logo img {}
+
+.header .login {
+    position: relative;
+    height: 40px;
+    width: 70%;
+}
+
+.header .login ul {
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    position: absolute;
+    right: -150px;
+    top: -50px;
+}
+
+.header .login ul li {}
+
+.header .login li a {
+    color: #CF103E;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.header .login li a i {
+    font-size: 25px;
+}
+
+.header nav {}
+
+.header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header nav li {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.header nav li a {}
+
+.header nav li a img {
+    position: absolute;
+}
+
+.header nav li a .nav2 {
+    position: absolute;
+    top: -25px;
+    left: -17.5px;
+    display: none;
+}
+
+.header nav li a:hover .nav2 {
+    display: block;
+
+}
+
+/* 메인설정 */
+.warp {
+    /* display: none; */
+}
+
+
+/* 히어로 설정 */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero .hero_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.hero .hero_bg div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hero .hero_bg1 {
+    background-image: url(img/candy002.jpg);
+    background-size: auto;
+    opacity: 0.5;
+}
+
+.hero .hero_bg2 {
+    background-image: url(img/page3.png);
+    background-position: center bottom;
+}
+
+.hero .hero_bg3 {
+    background-image: url(img/head_bg.png);
+    opacity: 0.3;
+}
+
+.hero .hero_inner {
+    position: absolute;
+    top: 15%;
+    left: 30px;
+    width: 100%;
+    height: 100hv;
+}
+
+.hero .hero_inner h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -900px;
+    margin-top: -110px;
+}
+
+.hero .hero_inner h1 img {}
+
+.hero .hero_inner p {
+    display: block;
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    left: 50%;
+    top: 50%;
+    margin-top: 220px;
+    margin-left: -850px;
+}
+
+.hero .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 200px;
+    left: 30%;
+    z-index: 9999;
+    width: 40%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #CF0F41;
+    border-radius: 50px;
+}
+
+.hero .search input {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 5px 250px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+
+.hero .search i {
+    color: #CF0F41;
+    font-size: 18px;
+    position: absolute;
+    right: 5%;
+}
+
+
+
+/* flavour 설정*/
+.flavour {
+    width: 100%;
+    height: 900px;
+    display: flex;
+}
+
+.flavour .flavour_left {
+    width: 50%;
+    height: 900px;
+}
+
+.flavour .flavour_left img {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.flavour .flavour_right {
+    width: 50%;
+    height: 900px;
+}
+
+.flavour .flavour_right .txt1 {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.flavour .flavour_right .txt1 .mamo {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+.flavour .flavour_right .txt1 .txt {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 130px;
+}
+
+.flavour .flavour_right .shop {
+    width: 100%;
+    height: 20%;
+    margin-top: 40px;
+    margin-left: 240px;
+    cursor: pointer;
+}
+
+.flavour .flavour_right .list {
+    width: 100%;
+    height: 30%;
+    margin-top: 50px;
+    margin-left: -60px;
+}
+
+.flavour .flavour_right .list ul {
+    display: flex;
+}
+
+.flavour .flavour_right .list ul li {
+    padding: 17px;
+}
+
+
+/* history */
+.history {
+    width: 100%;
+    height: 1800px;
+    background-color: #FFF0E1;
+    overflow: hidden;
+}
+
+.history .history_bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/section_bg.png);
+}
+
+.history .history_bg .his1 {
+    width: 100%;
+    height: 33.3333%;
+    display: flex;
+}
+
+.history .history_bg .his1 .img {
+    width: 50%;
+    height: 100%;
+}
+
+.history .history_bg .his1 .img img {
+    width: 700px;
+    height: 700px;
+    margin-left: 180px;
+}
+
+.history .history_bg .his1 .txt {
+    width: 50%;
+    height: 100%;
+}
+
+.history .history_bg .his1 .txt .txt1{
+    margin-top: 180px;
+    margin-left: -40px;
+    margin-bottom: 20px;
+}
+
+.history .history_bg .his2 {
+    width: 100%;
+    height: 33.3333%;
+    display: flex;
+}
+
+.history .history_bg .his2 .txt {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.history .history_bg .his2 .txt .txt1 {
+    margin-top: 100px;
+    margin-left: 310px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+.history .history_bg .his2 .txt .txt2 {
+    margin-top: 340px;
+    margin-left: 350px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+.history .history_bg .his2 .img {
+    width: 50%;
+    height: 100%;
+}
+
+.history .history_bg .his2 .img img{
+    width: 700px;
+    height: 700px;
+    margin-top: -50px;
+}
+
+.history .history_bg .his3 {
+    width: 100%;
+    height: 33.3333%;
+    display: flex;
+}
+
+.history .history_bg .his3 .img {
+    width: 50%;
+    height: 100%;
+}
+
+.history .history_bg .his3 .img img {
+    width: 700px;
+    height: 700px;
+    margin-left: 180px;
+    margin-top: -70px;
+}
+
+.history .history_bg .his3 .txt {
+    width: 50%;
+    height: 100%;
+}
+
+.history .history_bg .his3 .txt .txt1{
+    margin-top: 180px;
+    margin-left: -230px;
+    margin-bottom: 20px;
+}
+
+.history .history_bg .his3 .txt .txt2{
+    margin-left: -100px;
+}
+
+/* event 설정 */
+.event {
+    width: 100%;
+    height: 1000px;
+    background-color: #FEEB62;
+    position: relative;
+    overflow: hidden;
+}
+
+.event .event_bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+}
+
+.event .event_bg .img1 {
+    position: absolute;
+    margin-top: -500px;
+    margin-left: -1050px;
+}
+
+.event .event_bg .img2 {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -200px;
+
+}
+
+.event .event_bg .img3 {
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 400px;
+}
+
+.event .event_tx {
+    display: flex;
+}
+
+.event .event_tx .left {
+    width: 50%;
+    height: 100%;
+}
+.event .event_tx .left h1 {
+    color: #fff;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -400px;
+    margin-left: -850px;
+}
+
+.event .event_tx .left p {
+    color: #fff;
+    z-index: 11;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -400px;
+    margin-left: -850px;
+}
+
+.event .event_tx .right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.event .event_tx .right ul {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 250px;
+    margin-left: -350px;
+}
+.event .event_tx .right li {
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.event .event_tx .right li img {
+    position: absolute;
+}
+
+.event .event_tx .right li .circle1 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.event .event_tx .right li .circle2 {
+    position: absolute;
+    left: 20px;
+    display: none;
+}
+
+.event .event_tx .right li:hover .circle2 {
+    display: block;
+}
+
+.event .event_tx .right li span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #CF0F41;
+    margin-left: 50px;
+}
+
+
+/* review 설정 */
+.review {
+    width: 100%;
+    height: 1000px;
+    background-color: #FF4975;
+}
+
+.review .top {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review .top ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.review .top ul li {
+    box-shadow: 5px 5px 10px #666;
+}
+
+.review .bottom {
+    width: 50%;
+    height: 30%;
+    position: relative;
+}
+
+.review .bottom .line {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -70px;
+}
+
+.review .bottom .line_lo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -65px;
+    margin-left: -15px;
+}
+
+/* footer 설정 */
+.footer {
+    width: 100%;
+    height: 400px;
+    background-color: #FFF64F;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer .copyright {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 500px;
+    margin-top: 110px;
+    z-index: 50;
+}
+
+.footer .lollipop {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 640px;
+    margin-top: -110px;
+    transform: rotateY(180deg);
+}
