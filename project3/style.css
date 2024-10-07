@@ -418,6 +418,16 @@ section article.on {
     background-position: center;
     background-size: cover;
 }
+
+.profile .sns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -320px;
+    margin-top: -280px;
+    z-index: 99;
+}
+
 .profile .txt {
     width: 1500px;
     height: 680px;
@@ -653,20 +663,73 @@ section article.on {
     align-items: flex-start;
 }
 
-.camera {
+.picture .left .cam {
+    width: 278px;
+    height: 233px;
     position: absolute;
-    right: -24px;
+    top: 0;
+    left: 170px;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
 }
 
-.picture .left ul {
-    margin-top: 190px;
+.picture .left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+
+.picture .left .cam>ul {
+    position: absolute;
+    top: 110px;
+    left: 36px;
+    z-index: -1;
+}
+
+.picture .left .cam .left_list1 {
+    animation: move1 infinite linear 60s;
+}
+
+.picture .left .cam .left_list2 {
+    animation: move2 infinite linear 60s;
+}
+
+.picture .left .cam .left_list3 {
+    animation: move3 infinite linear 60s;
+}
+
 .picture .left li {
     transition: all 0.9s;
     filter: grayscale(90%);
     cursor: pointer;
     height: 265px;
 }
+
+@keyframes move1 {
+    0% {top:0}
+    33.3333% {top:795px}
+    66.6666% {top:1590px}
+    66.6667% {top:-795px}
+    100% {top:0}
+}
+
+@keyframes move2 {
+    0% {top:-795px}
+    33.3333% {top:0}
+    66.6666% {top:795px}
+    66.6667% {top:-1590px}
+    100% {top:-795px}
+}
+
+@keyframes move3 {
+    0% {top:-1590px}
+    33.3333% {top:-795px}
+    66.6666% {top:0}
+    66.6667% {top:0}
+    100% {top:795px}
+}
+
 
 .picture .left li:hover{
     filter: grayscale(0%);
@@ -697,7 +760,31 @@ section article.on {
 
 .picture .center2 ul {
     height: calc(285 * 4px);
+    position: absolute;
 }
+
+.picture .center2 .center2_list1 {
+    animation: moveCenter1 infinite linear 60s;
+}
+
+@keyframes moveCenter1 {
+    0% {top: 0}
+    50% {top:-1060px}
+    50.0001% {top:1060px}
+    100% {top: 0}
+}
+
+.picture .center2 .center2_list2 {
+    animation: moveCenter2 infinite linear 60s;
+}
+
+@keyframes moveCenter2 {
+    0% {top: 1060px}
+    50% {top:0}
+    50.0001% {top:0}
+    100% {top: -1060px}
+}
+
 .picture .center2 li {
     height: 265px;
     transition: all 0.9s;
@@ -716,6 +803,34 @@ section article.on {
     height: 100%;
 }
 
+.picture .right ul {
+    position: absolute;
+}
+
+.picture .right .right_list1 {
+    animation: moveRight1 infinite linear 60s;
+}
+
+@keyframes moveRight1 {
+    0% {top: 0}
+    50% {top:1060px}
+    50.0001% {top:-1060px}
+    100% {top: 0}
+}
+
+.picture .right .right_list2 {
+    animation: moveRight2 infinite linear 60s;
+}
+
+@keyframes moveRight2 {
+    0% {top: -1060px}
+    50% {top:0}
+    50.0001% {top:0}
+    100% {top: 1060px}
+}
+
+
+
 .picture .right li {
     transition: all 0.9s;
     filter: grayscale(90%);
@@ -727,7 +842,6 @@ section article.on {
     filter: grayscale(0%);
     box-shadow: 5px 5px 20px;
 }
-
 
 /* sing 설정 */
 
@@ -757,9 +871,11 @@ section article.on {
 }
 
 .sing .dvd li img {
-    transition: all 0.9s;
+    transition: all 0.8s;
     border-radius: 15px;
     filter: grayscale(90%);
+    width: 445px;
+    height: 288px;
 }
 
 .sing .dvd li:hover img {
@@ -797,27 +913,52 @@ section article.on {
     width: 100%;
     height: 20%;
     background-color: rgba(44, 44, 44, 0.5);
+    display: flex;
 }
 
-.sing .bar ul {
+.sing .bar .bar_play {
     display: flex;
     width: 50%;
     align-items: center;
+    margin-top: -100px;
 }
 
-.sing .bar li {
+.sing .bar .bar_play li {
     margin: 10px;
     cursor: pointer;
 }
 
-.sing .bar li img {
+.sing .bar .bar_play li img {
     width: 40px;
     height: 40px;
     margin-top: 10px;
 }
 
-.sing .bar li:nth-child(2) img {
+.sing .bar .bar_play li:nth-child(2) img {
     width: 50px;
     height: 50px;
 } 
+
+.sing .bar .bar_line {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    margin-top: -65px;
+    margin-left: -380px;
+}
+
+.sing .bar .bar_line li:nth-child(1) img {
+    width: 800px;
+}
+
+
+.sing .bar .bar_line li:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -125px;
+    margin-left: -10px;
+}
 
